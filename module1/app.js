@@ -13,7 +13,7 @@
          $scope.items = $scope.lunch.split(/\s*,\s*/).filter(item => item);
          var num = $scope.items.length;
          if( num == 0){
-           $scope.message = "Please enter valid data first!";
+           $scope.message = "Please enter valid lunch item first!";
            $scope.checkResult = "has-error";
          }else if( num > 0 && num <= 3){
            $scope.message = "Enjoy!";
