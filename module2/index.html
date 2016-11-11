@@ -30,8 +30,8 @@
     <!-- To Buy List -->
     <div class="col-md-6" ng-controller = 'ToBuyController as BuyListCtrl'>
      <h2>To Buy:</h2>
-     <ul ng-repeat = "item in BuyListCtrl.items">
-       <li>Buy {{item.quantity}} {{item.name}}<button ng-click ='BuyListCtrl.buyItem($index)' class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
+     <ul>
+       <li ng-repeat = "item in BuyListCtrl.items">Buy {{item.quantity}} {{item.name}}<button ng-click ='BuyListCtrl.buyItem($index)' class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
      <div ng-if='BuyListCtrl.items.length == 0' class="emptyMessage">Everything is bought!</div>
     </div>
