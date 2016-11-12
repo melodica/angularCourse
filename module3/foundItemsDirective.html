@@ -1,0 +1,25 @@
+<div>
+  <table class='table table-striped' ng-if='foundItems.length > 0'>
+    <thead>
+      <tr>
+        <td>Menu</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Small</td>
+        <td>Large</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat='item in foundItems'>
+          <td>{{item.short_name}}</td>
+          <td>{{item.name}}</td>
+          <td>{{item.description}}</td>
+          <td nowrap>{{item.price_small | currency }} <span ng-if='item.small_portion_name'> / </span>{{item.small_portion_name}}</td>
+          <td nowrap>{{item.price_large | currency }} <span ng-if='item.large_portion_name'> / </span> {{item.large_portion_name}}</td>
+          <td><button type="button" class="close" ng-click="onRemove({index: $index})"><span title="Don't Want This One">&times;</span></button></td>
+        </tr>
+    </tbody>
+  </table>
+  <p ng-if='foundItems.length === 0' class="bg-warning">{{message}}</p>
+<div>
