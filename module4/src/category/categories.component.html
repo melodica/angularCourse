@@ -1,0 +1,6 @@
+
+    <div class="row" ng-repeat = "category in $ctrl.categories">
+      <div class="col-md-1"><a ui-sref='items({categoryName: category.short_name})'>{{category.short_name}}</a></div>
+      <div class="col-md-1">{{category.name}}</div>
+      <div class="col-md-10">{{category.special_instructions}}</div>
+    </div>
